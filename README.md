@@ -1,5 +1,5 @@
 # arduino-ifttt-maker
-A library for raising events on the maker service on IFTTT. (Basically create the "this" in an IFTTT from your arduino)
+A library for raising events on the maker service on [IFTTT](https://ifttt.com). (Basically create the "this" in an IFTTT from your arduino)
 
 ## Installing
 
