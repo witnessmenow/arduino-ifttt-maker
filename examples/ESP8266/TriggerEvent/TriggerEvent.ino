@@ -47,7 +47,8 @@ void setup() {
   Serial.println(ip);
 
 
-  if(ifttt.triggerEvent(EVENT_NAME)){
+  //triggerEvent takes an Event Name and then you can optional pass in up to 3 extra Strings
+  if(ifttt.triggerEvent(EVENT_NAME, ssid, ip.toString())){
     Serial.println("Successfully sent");
   }
 

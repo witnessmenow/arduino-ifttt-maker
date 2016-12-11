@@ -21,6 +21,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
 #include <Arduino.h>
 #include <Client.h>
+#include <ArduinoJson.h>
 
 #define HOST "maker.ifttt.com"
 #define SSL_PORT 443
@@ -31,7 +32,8 @@ class IFTTTMaker
   public:
     IFTTTMaker (String key, Client &client);
     String sendTriggerEvent(String eventName);
-    bool triggerEvent(String eventName);
+    String sendTriggerEventWithData(String eventName, JsonObject& payload);
+    bool triggerEvent(String eventName, String value1 = "", String value2 = "", String value3= "");
 
   private:
     String _key;
