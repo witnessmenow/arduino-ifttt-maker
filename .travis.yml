@@ -10,7 +10,7 @@ cache:
 
 env:
     - SCRIPT=platformioSingle EXAMPLE_NAME=TriggerEvent EXAMPLE_FOLDER=/ BOARDTYPE=ESP8266 BOARD=d1_mini
-    - SCRIPT=platformioSingle EXAMPLE_NAME=TriggerEvent EXAMPLE_FOLDER=/ BOARDTYPE=101 BOARD=mkr1000USB
+    #- SCRIPT=platformioSingle EXAMPLE_NAME=TriggerEvent EXAMPLE_FOLDER=/ BOARDTYPE=101 BOARD=mkr1000USB
 
 install:
     - pip install -U platformio
