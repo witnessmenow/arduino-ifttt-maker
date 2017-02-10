@@ -19,7 +19,7 @@ char password[] = "yyyy";  // your network key
 
 
 
-WiFiClientSecure client;
+WiFiSSLClient client;
 IFTTTMaker ifttt(KEY, client);
 
 void setup() {
