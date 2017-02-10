@@ -26,12 +26,6 @@ void setup() {
 
   Serial.begin(115200);
 
-  // Set WiFi to station mode and disconnect from an AP if it was Previously
-  // connected
-  WiFi.mode(WIFI_STA);
-  WiFi.disconnect();
-  delay(100);
-
   // Attempt to connect to Wifi network:
   Serial.print("Connecting Wifi: ");
   Serial.println(ssid);
