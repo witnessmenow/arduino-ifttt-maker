@@ -13,7 +13,7 @@
 //------- Replace the following! ------
 char ssid[] = "xxx";       // your network SSID (name)
 char password[] = "yyyy";  // your network key
-#define KEY "zzzzzzzzzzzzzzzzzzzzzzz"  // Get it from this page https://ifttt.com/services/maker/settings
+#define KEY "zzzzzzzzzzzzzzzzzzzzzzz"  // Get it from this page https://ifttt.com/services/maker_webhooks/settings
 #define EVENT_NAME "device_on" // Name of your event name, set when you are creating the applet
 
 
