@@ -73,13 +73,13 @@ String IFTTTMaker::sendTriggerEventWithData(String eventName, JsonObject& payloa
     // JSON content type
     client->println("Content-Type: application/json");
     // Content length
-    int length = payload.measureLength();
+    int length = measureJson(payload);
     client->print("Content-Length:"); client->println(length);
     // End of headers
     client->println();
     // POST message body
     String out;
-    payload.printTo(out);
+    serializeJson(payload, out);
     //Serial.println(out);
     client->println(out);
 
@@ -102,8 +102,8 @@ String IFTTTMaker::sendTriggerEventWithData(String eventName, JsonObject& payloa
 
 bool IFTTTMaker::triggerEvent(String eventName , String value1, String value2, String value3){
 
-  DynamicJsonBuffer jsonBuffer;
-  JsonObject& payload = jsonBuffer.createObject();
+  DynamicJsonDocument doc(1024);
+  JsonObject payload = doc.to<JsonObject>();
   if(value1 != ""){
     payload["value1"] = value1;
   }
